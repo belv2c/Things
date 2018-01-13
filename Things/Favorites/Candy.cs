@@ -43,7 +43,7 @@ namespace Things.Favorites
         }
         public string Enjoying(bool IsDelicious) {
             {
-                return ("Sour candy is the best");
+                return $"The best candy is {_type}";
             }
        }
     }
