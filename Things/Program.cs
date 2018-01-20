@@ -34,6 +34,13 @@ namespace Things
             {
                 Console.WriteLine(plant.PlantCare(plant.Type, plant.AmountToWater)); 
             }
+
+            var favoriteBooks = new List<Book>
+            {
+                new Book {Title = "A People's History of the United States", Author = "Howard Zinn", isFiction = false},
+                new Book {Title = "The Flowers of Evil", Author = "Charles Baudelaire", isFiction = false},
+                new Book {Title = "Half Asleep in Frog Pajamas", Author = "Tom Robbins", isFiction = true}
+            };
         }
     }
 }
