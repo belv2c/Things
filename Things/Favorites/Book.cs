@@ -36,7 +36,7 @@ namespace Things.Favorites
             }
         }
 
-        public bool isFiction
+        public bool IsFiction
         {
             get
             {
@@ -53,6 +53,16 @@ namespace Things.Favorites
                     _isFiction = false;
                 }
             }
+        }
+
+        public string FictionOrNot(bool IsFiction)
+        {
+            if (IsFiction)
+            {
+                return $"{Title} is a book written by {Author} and I like it but I'm a bigger fan of non-fiction books.";
+               
+            }
+               return $"{Title} is a book written by {Author} and it's a cool non-fiction book.";
         }
     }
 }

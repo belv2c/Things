@@ -37,10 +37,15 @@ namespace Things
 
             var favoriteBooks = new List<Book>
             {
-                new Book {Title = "A People's History of the United States", Author = "Howard Zinn", isFiction = false},
-                new Book {Title = "The Flowers of Evil", Author = "Charles Baudelaire", isFiction = false},
-                new Book {Title = "Half Asleep in Frog Pajamas", Author = "Tom Robbins", isFiction = true}
+                new Book {Title = "A People's History of the United States", Author = "Howard Zinn", IsFiction = false},
+                new Book {Title = "The Flowers of Evil", Author = "Charles Baudelaire", IsFiction = false},
+                new Book {Title = "Half Asleep in Frog Pajamas", Author = "Tom Robbins", IsFiction = true}
             };
+            foreach (var book in favoriteBooks)
+            {
+                    Console.WriteLine(book.FictionOrNot(book.IsFiction));
+                    Console.ReadLine();
+            }
         }
     }
 }
