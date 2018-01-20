@@ -4,8 +4,21 @@ namespace Things.Favorites
 {
     class Candy
     {
+        protected string _name;
         protected string _type;
         protected bool _isDelicious;
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
 
         public string Type
         {
@@ -37,13 +50,14 @@ namespace Things.Favorites
                 }
             }
         }
-        public Candy()
-        {
-            Type = "SourPatchKids";
-        }
+
         public string Enjoying(bool IsDelicious) {
             {
-                return $"The best candy is {_type}";
+                if (IsDelicious)
+                {
+                    return $"{_name} is a very delicious type of candy because it is {_type}. Yum.";
+                }
+                    return $"{_name} is not a great candy because it is {_type}.";
             }
        }
     }
