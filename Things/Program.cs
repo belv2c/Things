@@ -8,12 +8,18 @@ namespace Things
     {
         static void Main(string[] args)
         {
-            var candy = new Candy
+            var goodCandy = new List<Candy>
             {
-                Type = "Sour",
-                IsDelicious = true
+                new Candy {Name = "Sour Patch Kids", Type = "sour", IsDelicious = true},
+                new Candy {Name = "Sour Straws", Type = "sour", IsDelicious = true},
+                new Candy {Name = "Swedish Fish", Type = "not sour", IsDelicious = false}
             };
-            candy.Enjoying(candy.IsDelicious);
+            foreach (var candy in goodCandy)
+            {
+                Console.WriteLine(candy.Enjoying(candy.IsDelicious));
+                Console.ReadLine();
+                Console.ReadKey();
+            }
 
             var meme = new Meme
             {
