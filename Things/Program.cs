@@ -17,18 +17,19 @@ namespace Things
             foreach (var candy in goodCandy)
             {
                 Console.WriteLine(candy.Enjoying(candy.IsDelicious));
-                Console.ReadLine();
-                Console.ReadKey();
             }
 
-            var meme = new Meme
+            var bestMemes = new List<Meme>
             {
-                Type = "Elf on a shelf",
-                IsImage = true,
-                Origin = "Reddit",
-                Phrase = 1
+                new Meme {Type = "Elf on a shelf", IsDead = true, Origin = "Reddit"},
+                new Meme {Type = "Doggos", IsDead = false, Origin = "Facebook"},
+                new Meme {Type = "Dat Boi", IsDead = true, Origin = "Google"}
+
             };
-            meme.MemeOrigin(meme.IsImage);
+            foreach (var meme in bestMemes)
+            {
+                Console.WriteLine(meme.MemeCulture(meme.IsDead));
+            }
 
             var houseplants = new List<Plant>
             {
@@ -50,7 +51,6 @@ namespace Things
             foreach (var book in favoriteBooks)
             {
                     Console.WriteLine(book.FictionOrNot(book.IsFiction));
-                    Console.ReadLine();
             }
         }
     }
