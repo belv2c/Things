@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Favorites\Candy.cs" />
+    <Compile Include="Favorites\Book.cs" />
     <Compile Include="Favorites\Plant.cs" />
     <Compile Include="Favorites\Meme.cs" />
     <Compile Include="Program.cs" />
