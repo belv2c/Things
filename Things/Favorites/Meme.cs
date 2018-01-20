@@ -6,9 +6,8 @@ namespace Things.Favorites
     class Meme
     {
         protected string _type;
-        protected bool _isImage;
+        protected bool _isDead;
         protected string _origin;
-        protected int _phrase;
 
         public string Type
         {
@@ -22,21 +21,21 @@ namespace Things.Favorites
             }
         }
 
-        public bool IsImage
+        public bool IsDead
         {
             get
             {
-                return _isImage;
+                return _isDead;
             }
             set
             {
                 if (value)
                 {
-                    _isImage = true;
+                    _isDead = true;
                 }
                 if (!value)
                 {
-                    _isImage = false;
+                    _isDead = false;
                 }
             }
         }
@@ -53,33 +52,13 @@ namespace Things.Favorites
             }
         }
 
-        public int Phrase
+        public string MemeCulture (bool IsDead)
         {
-            get
+            if (IsDead)
             {
-                return _phrase;
+                return $"{Type} originated on {Origin} and is no longer relevant to the culture of memes.";
             }
-            set
-            {
-                _phrase = 1;
-            }
-        }
-        public Meme()
-        {
-            _type = "Doggo";
-            _origin = "Instagram";
-        }
-        public bool MemeOrigin(bool isImage)
-        {
-            Console.WriteLine($"There are some pretty funny {_type} memes online.");
-            Console.ReadLine();
-            if (isImage)
-            {
-                _isImage = true;
-                return true;
-            }
-                _isImage = false;
-                return false;
+                return $"{Type} originated on {Origin} and is still relevant to the culture of memes.";
         }
     }
 }
